@@ -1,0 +1,13 @@
+<div class="container">
+
+    <h3 class="left">Sessions</h3>
+    <a href="#sessions/new" class="waves-effect waves-light btn right header-button">New</a>
+
+    {{#data-grid htmlElementId='sessionsGrid' bootgridConf=bgConf action="goToSession"}}
+        <th data-column-id="IndexName" data-width="120">Index Name</th>
+        <th data-column-id="ProfileName" data-width="120">Profile Name</th>
+        <th data-column-id="JobStartTime" data-width="250" data-converter="datetime">Job Start Time</th>
+        <th data-column-id="JobEndTime" data-width="250" data-converter="datetime">Job End Time</th>
+        <th data-column-id="SelectionQuery" data-width="200">Selection Query</th>
+    {{/data-grid}}
+</div>

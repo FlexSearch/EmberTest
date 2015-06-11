@@ -1,0 +1,16 @@
+<table class="table table-condensed table-hover table-striped" id="{{htmlElementId}}"
+    data-toggle="bootgrid" data-ajax="true"
+    data-url="http://localhost:9800/indices/duplicates/search">
+  <thead>
+    <tr>
+        {{yield}}
+    </tr>
+  </thead>
+</table>
+<div class="progress" show.bind="isLoading">
+  <div class="indeterminate"></div>
+</div>
+
+<pager>
+
+</pager>

@@ -1,0 +1,10 @@
+<div class="container">
+
+    <h3 class="left">Session</h3>
+
+    {{#data-grid htmlElementId='sessionsGrid' bootgridConf=bgConf action="goToSession"}}
+        <th data-column-id="sourcedisplayname" data-width="150">Display Name</th>
+        <th data-column-id="sourcestatus" data-width="120">Source Status</th>
+        <th data-column-id="totaldupesfound" data-width="150">Total Dupes Found</th>
+    {{/data-grid}}
+</div>
