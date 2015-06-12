@@ -1,0 +1,26 @@
+<div class="ui card">
+  <div class="content">
+    <div class="header">{{source.Name}}</div>
+    <div class="meta">{{source.Status}}</div>
+    <div class="description">
+      <div class="ui five column grid">
+        {{#each targets as |target|}}
+          <div class="four wide column">
+              <div class="green horizontal statistic">
+                <div class="value">
+                  {{target.Score}}
+                </div>
+                <div class="label">
+                  {{target.Name}}
+                </div>
+              </div>
+          </div>
+          <div class="column">
+          <!-- <div class="ui divider"></div> -->
+            <div class="ui star rating" data-rating="{{target.Quality}}"></div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>

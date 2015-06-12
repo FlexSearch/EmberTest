@@ -48,5 +48,10 @@ export default Ember.Controller.extend({
             rowCount: 10,
             selection: true
         }
-    }.property('model')
+    }.property('model'),
+    sampleSource: {Name: "Vladimir Negacevschi", Status: "Processed"},
+    sampleTargets: [
+        {Name: "Vladimir", Score: 88, Quality: 3},
+        {Name: "Vlad", Score: 65, Quality: 2},
+        {Name: "Vladi", Score: 83, Quality: 4} ],
 });
