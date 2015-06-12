@@ -7,7 +7,10 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.resource('sessions');
-  this.resource('session', {path: '/session/:session_id'});
+  // TODO: Add paging support
+  this.resource('session', {path: '/session/:session_id'}, function(){
+      this.resource('comparison', {path: '/:source_id/:target_id'});
+  });
 
 });
 

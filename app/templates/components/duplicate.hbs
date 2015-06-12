@@ -5,14 +5,14 @@
     <div class="meta">{{source.Status}}</div>
     <div class="description">
         {{#each targets as |target|}}
-              <a class="ui tiny green horizontal statistic">
+            {{#link-to 'comparison' target class="ui tiny green horizontal statistic"}}
                 <div class="text value">
                     {{target.Name}}
                 </div>
                 <div class="label">
                   {{target.Score}}
                 </div>
-            </a>
+            {{/link-to}}
         {{/each}}
     </div>
   </div>

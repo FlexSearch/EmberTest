@@ -1,9 +1,4 @@
-export default Ember.Component.extend({
-    source: {Name: "name", Status: "Processed"},
-    targets: [
-        {Name: "name1", Score: 88, Quality: 3},
-        {Name: "name2", Score: 65, Quality: 2},
-        {Name: "name3", Score: 83, Quality: 4} ],
+export default Ember.Controller.extend({
     didInsertElement: function() {
         var component = this;
 
@@ -17,5 +12,4 @@ export default Ember.Component.extend({
             });
         });
     },
-    tagName: ''
 });

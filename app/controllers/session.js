@@ -54,10 +54,10 @@ export default Ember.Controller.extend({
     }.property('model'),
     sampleDuplicates: [
         {
-            Source: {Name: "Vladimir Negacevschi", Status: "Processed", Quality: 2},
+            Source: {Name: "Vladimir Negacevschi", Status: "Processed", Quality: 2 },
             Targets: [
                 {Name: "Vladimir", Score: 88},
-                {Name: "Vlad", Score: 65},
+                {Name: "Vlad", Score: 65, trId: "020d2294-c4ee-e011-a3a1-00237dec467a", srId: "47673f68-b677-df11-949d-00237dec9650"},
                 {Name: "Vladi", Score: 83} ]
         },
         {
