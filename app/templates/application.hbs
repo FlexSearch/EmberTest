@@ -1,10 +1,10 @@
-<nav class="blue accent-1">
-  <div class="nav-wrapper">
-    <a href="#" class="brand-logo">Flexsearch</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a {{link-for 'sessions'}}></a>Sessions</li>
-    </ul>
-  </div>
-</nav>
+<header>
+    <div class="ui fixed inverted main menu large">
+        <div class="container">
+            <a class="active item" href="http://www.flexsearch.net/"><i class="home icon"></i>FlexSearch</a>
+            {{#link-to 'sessions' class='item'}}Sessions{{/link-to}}
+        </div>
+    </div>
+</header>
 
 {{outlet}}

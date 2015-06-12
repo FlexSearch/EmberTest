@@ -10,19 +10,7 @@ export default Ember.Component.extend({
         $(document).ready(function() {
             // Enable the ratings
             $('.ui.rating').rating({maxRating: 5});
-
-            // $("#" + component.get('htmlElementId'))
-            //     .bootgrid(component.get('bootgridConf'))
-            //     .on("click.rs.jquery.bootgrid", function(e,c,row){
-            //         component.sendAction('action', row);
-            //     })
-            //     .on("loaded.rs.jquery.bootgrid", function(e){
-            //         // Prevent <a> tags in the grid from redirecting the page
-            //         $("#" + component.get('htmlElementId') + "-footer")
-            //             .find('a').click(function(e){
-            //                 e.preventDefault();
-            //             });
-            //     });
         });
-    }
+    },
+    tagName: ''
 });

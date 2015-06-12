@@ -1,26 +1,22 @@
 <div class="ui card">
   <div class="content">
+    <!-- <div class="ui right floated star rating" data-rating="2"></div> -->
     <div class="header">{{source.Name}}</div>
     <div class="meta">{{source.Status}}</div>
     <div class="description">
-      <div class="ui five column grid">
         {{#each targets as |target|}}
-          <div class="four wide column">
-              <div class="green horizontal statistic">
-                <div class="value">
-                  {{target.Score}}
+              <a class="ui tiny green horizontal statistic">
+                <div class="text value">
+                    {{target.Name}}
                 </div>
                 <div class="label">
-                  {{target.Name}}
+                  {{target.Score}}
                 </div>
-              </div>
-          </div>
-          <div class="column">
-          <!-- <div class="ui divider"></div> -->
-            <div class="ui star rating" data-rating="{{target.Quality}}"></div>
-          </div>
+            </a>
         {{/each}}
-      </div>
     </div>
+  </div>
+  <div class="extra">
+      Quality: <div class="ui star rating" data-rating="{{source.Quality}}"></div>
   </div>
 </div>

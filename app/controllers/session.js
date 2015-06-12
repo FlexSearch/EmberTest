@@ -1,4 +1,7 @@
 export default Ember.Controller.extend({
+    sessionProperties: function(){
+        return JSON.parse(this.get('model').Data.Fields.sessionproperties);
+    }.property('model'),
     bgConf: function(){
         var sessionData = this.get('model').Data;
 
@@ -49,9 +52,38 @@ export default Ember.Controller.extend({
             selection: true
         }
     }.property('model'),
-    sampleSource: {Name: "Vladimir Negacevschi", Status: "Processed"},
-    sampleTargets: [
-        {Name: "Vladimir", Score: 88, Quality: 3},
-        {Name: "Vlad", Score: 65, Quality: 2},
-        {Name: "Vladi", Score: 83, Quality: 4} ],
+    sampleDuplicates: [
+        {
+            Source: {Name: "Vladimir Negacevschi", Status: "Processed", Quality: 2},
+            Targets: [
+                {Name: "Vladimir", Score: 88},
+                {Name: "Vlad", Score: 65},
+                {Name: "Vladi", Score: 83} ]
+        },
+        {
+            Source: {Name: "Seemant Rajvanshi", Status: "Processed", Quality: 3},
+            Targets: [
+                {Name: "See", Score: 88},
+                {Name: "Raj", Score: 65},
+                {Name: "Ant", Score: 83} ]
+        },
+        {
+            Source: {Name: "Scott Hanselman", Status: "Processed", Quality: 4},
+            Targets: [
+                {Name: "Hansel", Score: 88},
+                {Name: "Man", Score: 65},
+                {Name: "Scooby", Score: 83} ]
+        },
+        {
+            Source: {Name: "Elliot Fu", Status: "Processed", Quality: 5},
+            Targets: [
+                {Name: "Fu", Score: 88},
+                {Name: "Elliot", Score: 100}]
+        },
+        {
+            Source: {Name: "Helen Troy", Status: "Processed", Quality: 1},
+            Targets: [
+                {Name: "Helen", Score: 95}]
+        }
+    ]
 });

@@ -1,12 +1,22 @@
-<div class="container">
-
-    <h3 class="left">Session</h3>
-
-    {{#data-grid htmlElementId='sessionsGrid' bootgridConf=bgConf action="goToSession"}}
-        <th data-column-id="sourcedisplayname" data-width="150">Display Name</th>
-        <th data-column-id="sourcestatus" data-width="120">Source Status</th>
-        <th data-column-id="totaldupesfound" data-width="150">Total Dupes Found</th>
-    {{/data-grid}}
-
-    {{component "duplicate" source=sampleSource targets=sampleTargets action=""}}
-</div>
+<section>
+    <h2 class="ui center aligned teal header">
+        <i class="circular file text icon"></i>
+        Session for {{sessionProperties.IndexName}} index using {{sessionProperties.ProfileName}} profile
+    </h2>
+    <div class="ui two column padded grid">
+        <div class="column duplicates">
+            <h2 class="ui header">
+                <i class="table icon"></i>
+                <div class="content">Duplicates</div>
+            </h2>
+            {{component "duplicate-grid" duplicates=sampleDuplicates}}
+        </div>
+        <div class="column comparison">
+            <h2 class="ui header">
+                <i class="compress icon"></i>
+                <div class="content">Source vs Target</div>
+            </h2>
+            <img class="ui wireframe image" src="images/paragraph.png">
+        </div>
+    </div>
+</section>

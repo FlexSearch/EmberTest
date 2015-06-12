@@ -1,0 +1,76 @@
+body {
+    margin: 0px;
+}
+
+.topbar {
+    background-color: rgb(27, 28, 29);
+    padding: 20px 0px 20px 0px;
+}
+
+    .topbar .title {
+        margin-left: 50px;
+        font-size: 50px;
+        color: white;
+        font-family: 'Roboto', 'Open Sans', 'Source Sans Pro', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    }
+
+#Grid, .duplicates .grid, .comparison .grid {
+    margin: 20px 50px 0px 50px;
+    border-style: solid;
+    border-top: 0px;
+    box-shadow: 2px 2px 5px #989BCD;
+}
+
+.duplicates .grid, .comparison .grid {
+    display: none;
+}
+
+.duplicates .header, .duplicates img {
+    margin-left: 50px;
+}
+
+.comparison .grid {
+    margin-left: 0px;
+}
+
+td.warning {
+    background-color: #ffe8e6;
+    color: #d95c5c;
+}
+
+footer {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 50px;
+    background-color: #333;
+    line-height: 120px;
+    vertical-align: middle;
+    color: #fff;
+}
+
+header {
+    display: inline-block;
+    padding-bottom: 50px;
+}
+
+.ui.main.menu {
+    padding-left: 50px;
+}
+
+.wireframe.image {
+    opacity: 0.5;
+}
+
+/* Syncfusion overwrite */
+td.e-detailcell {
+    border-style: none;
+    padding: 0px !important;
+}
+
+a.ui.horizontal.statistic {
+    margin-left: 0px !important;
+}
+
+.ui.card {
+    width: 200px !important;
+}

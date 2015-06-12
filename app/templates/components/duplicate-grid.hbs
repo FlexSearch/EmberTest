@@ -1,0 +1,5 @@
+<div class="ui cards">
+    {{#each duplicates as |duplicate|}}
+        {{component "duplicate" source=duplicate.Source targets=duplicate.Targets}}
+    {{/each}}
+</div>
