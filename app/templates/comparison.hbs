@@ -1,1 +1,18 @@
-<div>Comparison</div>
+<table class="ui celled table">
+  <thead>
+    <tr>
+      <th>Field Name</th>
+      <th>Source Value</th>
+      <th>Target Value</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#each model.fields}}
+          <tr {{bind-attr class="areEqual::error"}}>
+            <td>{{fieldName}}</td>
+            <td>{{sourceValue}}</td>
+            <td>{{targetValue}}</td>
+          </tr>
+      {{/each}}
+  </tbody>
+</table>

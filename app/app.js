@@ -19,4 +19,17 @@ loadInitializers(App, config.modulePrefix);
 // Ignore deprecation warnings
 Ember.deprecate = function(){}
 
+// Add event for views that is called once all the html elements have been
+// rendered. 'didInsertElement' only guarantees that it's called once the root
+// element has been rendered.
+Ember.View.reopen({
+  didInsertElement : function(){
+    this._super();
+    Ember.run.scheduleOnce('afterRender', this, this.afterRenderEvent);
+  },
+  afterRenderEvent : function(){
+    // implement this hook in your own subclasses and run your jQuery logic there
+  }
+});
+
 export default App;
