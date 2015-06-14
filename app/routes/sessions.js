@@ -4,7 +4,7 @@ export default Ember.Route.extend({
         goToSession: function(sessionInfo){
             var sessionId = sessionInfo.Id;
 
-            this.transitionTo('session', sessionId);
+            this.transitionTo('session', sessionId, 1);
         }
     }
 });

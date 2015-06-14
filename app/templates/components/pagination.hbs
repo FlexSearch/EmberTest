@@ -1,0 +1,15 @@
+<div class="ui basic center aligned segment">
+    <div class="ui pagination menu">
+        {{#link-to 'session' sessionId 1 class="icon item back"}}
+            <i class="angle double left icon"></i>
+        {{/link-to}}
+        {{#each pages as |page|}}
+            {{#link-to 'session' sessionId page.idx class="item"}}
+                {{{page.body}}}
+            {{/link-to}}
+        {{/each}}
+        {{#link-to 'session' sessionId pageCount class="icon item back"}}
+            <i class="angle double right icon"></i>
+        {{/link-to}}
+    </div>
+</div>

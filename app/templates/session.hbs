@@ -9,7 +9,8 @@
                 <i class="table icon"></i>
                 <div class="content">Duplicates</div>
             </h2>
-            {{component "duplicate-grid" duplicates=sampleDuplicates}}
+            {{component "duplicate-grid" duplicates=duplicates}}
+            {{component "pagination" itemsCount=duplicatesCount pageSize=20 activePage=model.pageIndex sessionId=sessionProperties.Id}}
         </div>
         <div class="column comparison">
             <h2 class="ui header">
