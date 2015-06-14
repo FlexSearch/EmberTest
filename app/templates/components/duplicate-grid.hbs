@@ -1,5 +1,5 @@
 <div class="ui cards">
     {{#each duplicates as |duplicate|}}
-        {{component "duplicate" source=duplicate.Source targets=duplicate.Targets}}
+        {{component "duplicate" source=duplicate.Source targets=duplicate.Targets sessionId=sessionId}}
     {{/each}}
 </div>

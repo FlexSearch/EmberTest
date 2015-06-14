@@ -1,9 +1,4 @@
 export default Ember.Component.extend({
-    source: {Name: "name", Status: "Processed"},
-    targets: [
-        {Name: "name1", Score: 88, Quality: 3},
-        {Name: "name2", Score: 65, Quality: 2},
-        {Name: "name3", Score: 83, Quality: 4} ],
     didInsertElement: function() {
         var component = this;
 
@@ -15,6 +10,21 @@ export default Ember.Component.extend({
             $('.ui.cards a').click(function(e){
                 e.preventDefault();
             });
+
+            // Enable the dropdowns and set them to their initial values
+            $('.ui.dropdown').each(function (idx, item){
+                var $item = $(item);
+                var active = $item.attr('initial');
+                $item.dropdown('set selected', active);
+                $item.dropdown({
+                    onChange: function(value, text, $selectedItem){
+                        // Update the status of the source record
+                        var sourceRecordId = $item.attr('sourceId');
+                        // TODO
+                        console.log("Updating ", sourceRecordId, ' - ', value);
+                    }
+                });
+            })
         });
     },
     tagName: ''

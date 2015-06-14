@@ -2,10 +2,18 @@
   <div class="content">
     <!-- <div class="ui right floated star rating" data-rating="2"></div> -->
     <div class="header">{{source.Name}}</div>
-    <div class="meta">{{source.Status}}</div>
+    <div class="ui dropdown" initial={{source.Status}} sourceId={{source.Id}}>
+        <div class="text">Status</div>
+        <!-- <i class="dropdown icon"></i> -->
+        <div class="menu">
+          <div class="item" data-value="0">Initial</div>
+          <div class="item" data-value="1">Processed</div>
+          <div class="item" data-value="2">Reviewed</div>
+        </div>
+    </div>
     <div class="description">
         {{#each targets as |target|}}
-            {{#link-to 'comparison' target.srId target.trId class="ui tiny green horizontal statistic"}}
+            {{#link-to 'comparison' source.Id target.trId class="ui tiny green horizontal statistic"}}
                 <div class="text value">
                     {{target.Name}}
                 </div>

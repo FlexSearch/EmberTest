@@ -55,6 +55,7 @@ export default Ember.Route.extend({
             for (let dup of dups) {
                 var item = {
                     Source : {
+                        Id: dup.Fields.sourcerecordid,
                         Name: dup.Fields.sourcedisplayname,
                         Status: dup.Fields.sourcestatus,
                         Quality: dup.Fields.totaldupesfound },
