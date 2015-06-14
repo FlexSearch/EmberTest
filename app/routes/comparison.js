@@ -1,6 +1,6 @@
 export default Ember.Route.extend({
     model: function(params) {
-        var session = JSON.parse(this.modelFor('session').session.Data.Fields.sessionproperties);
+        var session = JSON.parse(this.modelFor('session').session.Fields.sessionproperties);
         var flexSearchUrl = "http://localhost:9800";
 
         var getRecordById = function (indexName, id) {
